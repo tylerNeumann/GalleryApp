@@ -1,15 +1,20 @@
 package fvtc.edu.galleryapp;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -217,5 +222,97 @@ public static final String TAG = "MainActivity";
             e.printStackTrace();
             return e.getMessage();
         }
+    }
+    public boolean onFling(@Nullable MotionEvent motionEvent1,
+                           @NonNull MotionEvent motionEvent2,
+                           float velocityX,
+                           float velocityY) {
+        Log.d(TAG, "onFling: ");
+
+        int numOfCards = characters.length;
+        try {
+            //decide which direction I'm flinging
+            int x1 = (int) (motionEvent1 != null ? motionEvent1.getX() : 0);
+            int x2 = (int)motionEvent2.getX();
+
+
+
+            if(x1 < x2){
+                Animation move = AnimationUtils.loadAnimation(this, R.anim.moveright);
+                move.setAnimationListener(new AnimationListener());
+                imgCard.startAnimation(move);
+                tvCard.startAnimation(move);
+                //swipe right
+                Log.d(TAG, "onFling: Right");
+                cardNum = (cardNum - 1 + numOfCards) % numOfCards;
+            }else{
+                Animation move = AnimationUtils.loadAnimation(this, R.anim.moveleft);
+                move.setAnimationListener(new AnimationListener());
+                imgCard.startAnimation(move);
+                tvCard.startAnimation(move);
+                //swipe left
+                Log.d(TAG, "onFling: Left");
+                cardNum = (cardNum + 1) % numOfCards;
+            }
+        }
+        catch (Exception ex){
+            Log.e(TAG, "onSingleTapUp: " + ex.getMessage());
+            ex.printStackTrace();
+        }
+
+        return true;
+    }
+    @Override
+    public boolean onSingleTapUp(@NonNull MotionEvent motionEvent) {
+        Log.d(TAG, "onSingleTapUp: ");
+        String message;
+        try {
+            if(isFront){
+                //go to back
+                message = "go to back";
+                imgCard.setVisibility(View.VISIBLE);
+                imgCard.setImageResource(imgs[cardNum + 25]);
+                tvCard.setText(characters[cardNum].getDescription());
+                String description = characters[cardNum].getDescription();
+                tvCard.setTypeface(Typeface.DEFAULT);
+                tvCard.setTypeface(Typeface.SERIF,Typeface.BOLD);
+            }
+            else{
+                //go to front
+                message = "go to front";
+                tvCard.setTypeface(Typeface.DEFAULT);
+                imgCard.setImageResource(imgs[cardNum]);
+                imgCard.setVisibility(View.VISIBLE);
+                tvCard.setText(characters[cardNum].getName());
+            }
+
+            isFront = !isFront;
+            Log.d(TAG, "onSingleTapUp: " + message);
+        }
+        catch (Exception ex){
+            Log.e(TAG, "onSingleTapUp: " + ex.getMessage());
+            ex.printStackTrace();
+        }
+        return false;
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent motionEvent){
+        return gestureDetector.onTouchEvent(motionEvent);
+    }
+    @Override
+    public boolean onDown(@NonNull MotionEvent e) {
+        return false;
+    }
+    @Override
+    public void onShowPress(@NonNull MotionEvent e) {
+
+    }
+    public boolean onScroll(@Nullable MotionEvent e1, @NonNull MotionEvent e2, float distanceX, float distanceY) {
+        return false;
+    }
+    @Override
+    public void onLongPress(@NonNull MotionEvent e) {
+
     }
 }
