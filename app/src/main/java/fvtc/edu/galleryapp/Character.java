@@ -3,6 +3,7 @@ package fvtc.edu.galleryapp;
 public class Character {
     private String name;
     private String description;
+    private int imgId;
 
     public Character(String name, String description){
         this.name = name;
@@ -23,4 +24,5 @@ public class Character {
     public void setDescription(String description) {
         this.description = description;
     }
+
 }

@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">GalleryApp</string>
     <string name="hello_world">Hello World!</string>
+    <string name="display_a_character">display a character</string>
+    <string name="character_1">character 1</string>
+    <string name="character_2">character 2</string>
+    <string name="character_3">character 3</string>
 </resources>
