@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.character3.Character3"
+    tools:context=".ui.character21.Character21"
     android:background="@drawable/gradient">
 
     <TextView
@@ -28,9 +28,10 @@
         android:layout_height="275dp"
         android:layout_marginTop="25dp"
         android:layout_marginBottom="25dp"
-        app:srcCompat="@drawable/_player"
+        app:srcCompat="@drawable/_lisa"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/tvInfo"
         app:layout_constraintTop_toTopOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

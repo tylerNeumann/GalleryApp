@@ -1,4 +1,4 @@
-package fvtc.edu.galleryapp.ui.notifications;
+package fvtc.edu.galleryapp.ui.character3;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,21 +10,21 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import fvtc.edu.galleryapp.databinding.FragmentNotificationsBinding;
+import fvtc.edu.galleryapp.databinding.FragmentCharacter3Binding;
 
-public class NotificationsFragment extends Fragment {
+public class Character3 extends Fragment {
 
-    private FragmentNotificationsBinding binding;
+    private FragmentCharacter3Binding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        NotificationsViewModel notificationsViewModel =
-                new ViewModelProvider(this).get(NotificationsViewModel.class);
+        Character3ViewModel notificationsViewModel =
+                new ViewModelProvider(this).get(Character3ViewModel.class);
 
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false);
+        binding = FragmentCharacter3Binding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textNotifications;
+        final TextView textView = binding.tvInfo;
         notificationsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
