@@ -22,20 +22,36 @@ import java.io.InputStreamReader;
 
 import fvtc.edu.galleryapp.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements GestureDetector.OnGestureListener{
 
     private ActivityMainBinding binding;
 public static final String TAG = "MainActivity";
     Character[] characters = {
-            new Character("Beakon", "thunder bird"),
-            new Character("Chillet", "ice dragon"),
-            new Character("Daedream","poison fae"),
-            new Character("Foxsparks","fire fox"),
-            new Character("Helzypher", "hell dragon"),
-            new Character("Nitewing", "bird"),
-            new Character("Pyrin Noct", "dark flaming kyrin"),
-            new Character("Tombat", "bat"),
-            new Character("Univolt", "lightning unicorn")
+            new Character("Amber", "flame archer"),
+            new Character("Barbara", "water mage"),
+            new Character("Bennett","flame swordsman"),
+            new Character("Charlotte","ice mage"),
+            new Character("Chonyun", "ice greatsword wielder"),
+            new Character("Diona", "ice archer"),
+            new Character("Freminet", "ice greatsword wielder"),
+            new Character("Gaming", "flame greatsword wielder"),
+            new Character("Gorou", "earth archer"),
+            new Character("Jean", "wind swordswoman"),
+            new Character("Kaeya", "ice swordsman"),
+            new Character("Kirara","plant swordswoman"),
+            new Character("Kujou Sara","lightning archer"),
+            new Character("Lisa", "lightning mage"),
+            new Character("Lynette", "wind swordswoman"),
+            new Character("Mona", "water mage"),
+            new Character("Ningguang", "earth mage"),
+            new Character("Noelle", "earth greatsword wielder"),
+            new Character("Player", "swordsman"),
+            new Character("Razor", "lightning greatsword wielder"),
+            new Character("Rosaria","ice spearwoman"),
+            new Character("Tighnari","plant archer"),
+            new Character("Xiangling", "flame spearwoman "),
+            new Character("Xingqui", "water swordsman"),
+            new Character("Xinyan", "flame greatsword wielder"),
     };
     int[] imgs ={
             R.drawable._amber,
@@ -138,6 +154,12 @@ public static final String TAG = "MainActivity";
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
+
+        imgCard = findViewById(R.id.imageView);
+        tvCard = findViewById(R.id.tvInfo);
+        updateToNextCard();
+        gestureDetector = new GestureDetector(this,this);
+        Log.d(TAG, "onCreate: complete");
     }
     private class AnimationListener implements Animation.AnimationListener{
 
