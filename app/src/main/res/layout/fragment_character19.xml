@@ -20,7 +20,9 @@
         app:layout_constraintTop_toTopOf="parent"
         android:textColor="@color/yellow"
         android:layout_marginTop="175dp"
-        android:padding="10dp"/>
+        android:padding="10dp"
+        android:scrollbars="vertical"
+        android:gravity="start"/>
 
     <ImageView
         android:id="@+id/imageView"

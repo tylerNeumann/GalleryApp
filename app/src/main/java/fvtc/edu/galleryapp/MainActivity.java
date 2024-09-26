@@ -2,6 +2,7 @@ package fvtc.edu.galleryapp;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -20,7 +21,7 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-
+import android.text.method.ScrollingMovementMethod;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -162,6 +163,7 @@ public static final String TAG = "MainActivity";
 
         imgCard = findViewById(R.id.imageView);
         tvCard = findViewById(R.id.tvInfo);
+        tvCard.setMovementMethod(new ScrollingMovementMethod());
         updateToNextCard();
         gestureDetector = new GestureDetector(this,this);
         Log.d(TAG, "onCreate: complete");
