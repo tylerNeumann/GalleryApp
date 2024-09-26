@@ -90,7 +90,31 @@ public static final String TAG = "MainActivity";
             R.drawable._xinyan_fb,
     };
     int[] textFiles= {
-
+            R.raw._amber,
+            R.raw._barbara,
+            R.raw._bennett,
+            R.raw._charlotte,
+            R.raw._chongyun,
+            R.raw._diona,
+            R.raw._freminet,
+            R.raw._gaming,
+            R.raw._gorou,
+            R.raw._jean,
+            R.raw._kaeya,
+            R.raw._kirara,
+            R.raw._kujou_sara,
+            R.raw._lisa,
+            R.raw._lynette,
+            R.raw._mona,
+            R.raw._ningguang,
+            R.raw._noelle,
+            R.raw._player,
+            R.raw._razor,
+            R.raw._rosaria,
+            R.raw._tighnari,
+            R.raw._xiangling,
+            R.raw._xingqiu,
+            R.raw._xinyan,
     };
     int cardNum = 0;
     boolean isFront = true;
