@@ -5,4 +5,13 @@
     <string name="character_1">character 1</string>
     <string name="character_2">character 2</string>
     <string name="character_3">character 3</string>
+    <string name="gorou">Gorou</string>
+    <string name="amber">Amber</string>
+    <string name="barbara">Barbara</string>
+    <string name="bennett">Bennett</string>
+    <string name="charlotte">Charlotte</string>
+    <string name="chongyun">Chongyun</string>
+    <string name="diona">Diona</string>
+    <string name="freminet">Freminet</string>
+    <string name="gaming">Gaming</string>
 </resources>

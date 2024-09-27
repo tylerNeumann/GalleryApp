@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/amber"
+        android:orderInCategory="100"
+        android:title="@string/amber"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/barbara"
+        android:orderInCategory="200"
+        android:title="@string/barbara"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/bennett"
+        android:orderInCategory="300"
+        android:title="@string/bennett"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/charlotte"
+        android:orderInCategory="400"
+        android:title="@string/charlotte"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/chongyun"
+        android:orderInCategory="500"
+        android:title="@string/chongyun"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/diona"
+        android:orderInCategory="600"
+        android:title="@string/diona"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/freminet"
+        android:orderInCategory="700"
+        android:title="@string/freminet"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/gaming"
+        android:orderInCategory="800"
+        android:title="@string/gaming"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/gorou"
+        android:orderInCategory="900"
+        android:title="@string/gorou"
+        app:showAsAction="never" />
+</menu>

@@ -20,7 +20,7 @@ public class IntialData {
                 new Character("Freminet", "ice greatsword wielder"),
                 new Character("Gaming", "flame greatsword wielder"),
                 new Character("Gorou", "earth archer"),
-                new Character("Jean", "wind swordswoman"),
+                /*new Character("Jean", "wind swordswoman"),
                 new Character("Kaeya", "ice swordsman"),
                 new Character("Kirara","plant swordswoman"),
                 new Character("Kujou Sara","lightning archer"),
@@ -35,7 +35,7 @@ public class IntialData {
                 new Character("Tighnari","plant archer"),
                 new Character("Xiangling", "flame spearwoman "),
                 new Character("Xingqui", "water swordsman"),
-                new Character("Xinyan", "flame greatsword wielder"),
+                new Character("Xinyan", "flame greatsword wielder"),*/
         };
         return characters;
     }
@@ -50,7 +50,7 @@ public class IntialData {
                 R.drawable._freminet,
                 R.drawable._gaming,
                 R.drawable._gorou,
-                R.drawable._jean,
+                /*R.drawable._jean,
                 R.drawable._kaeya,
                 R.drawable._kirara,
                 R.drawable._kujou_sara,
@@ -65,7 +65,7 @@ public class IntialData {
                 R.drawable._tighnari,
                 R.drawable._xiangling,
                 R.drawable._xingqiu,
-                R.drawable._xinyan,
+                R.drawable._xinyan,*/
                 R.drawable._amber_fb,
                 R.drawable._barbara_fb,
                 R.drawable._bennett_fb,
@@ -75,7 +75,7 @@ public class IntialData {
                 R.drawable._freminet_fb,
                 R.drawable._gaming_fb,
                 R.drawable._gorou_fb,
-                R.drawable._jean_fb,
+                /*R.drawable._jean_fb,
                 R.drawable._kaeya_fb,
                 R.drawable._kirara_fb,
                 R.drawable._kujou_sara_fb,
@@ -90,7 +90,7 @@ public class IntialData {
                 R.drawable._tighnari_fb,
                 R.drawable._xiangling_fb,
                 R.drawable._xingqiu_fb,
-                R.drawable._xinyan_fb,
+                R.drawable._xinyan_fb,*/
         };
         return imgs;
     }
@@ -105,7 +105,7 @@ public class IntialData {
                 R.raw._freminet,
                 R.raw._gaming,
                 R.raw._gorou,
-                R.raw._jean,
+                /*R.raw._jean,
                 R.raw._kaeya,
                 R.raw._kirara,
                 R.raw._kujou_sara,
@@ -120,7 +120,7 @@ public class IntialData {
                 R.raw._tighnari,
                 R.raw._xiangling,
                 R.raw._xingqiu,
-                R.raw._xinyan,
+                R.raw._xinyan,*/
         };
         return textFiles;
     }
