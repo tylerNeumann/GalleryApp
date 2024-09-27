@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
     boolean isFront = true;
     ImageView imgCard;
     TextView tvCard;
+    LinearLayout navbar;
     GestureDetector gestureDetector;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
         new Navbar().setNavbar(this);
         imgCard = findViewById(R.id.imageView);
         tvCard = findViewById(R.id.tvInfo);
+        navbar = findViewById(R.id.navbar);
         tvCard.setMovementMethod(new ScrollingMovementMethod());
         tvCard.setText(characters[cardNum].getName());
         updateToNextCard();
@@ -131,6 +134,7 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
                 move.setAnimationListener(new MainActivity.AnimationListener());
                 imgCard.startAnimation(move);
                 tvCard.startAnimation(move);
+                navbar.startAnimation(move);
                 //swipe right
                 Log.d(TAG, "onFling: Right");
                 cardNum = (cardNum - 1 + numOfCards) % numOfCards;
@@ -139,6 +143,7 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
                 move.setAnimationListener(new MainActivity.AnimationListener());
                 imgCard.startAnimation(move);
                 tvCard.startAnimation(move);
+                navbar.startAnimation(move);
                 //swipe left
                 Log.d(TAG, "onFling: Left");
                 cardNum = (cardNum + 1) % numOfCards;
