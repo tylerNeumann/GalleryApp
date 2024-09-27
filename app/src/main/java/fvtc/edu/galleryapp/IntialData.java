@@ -3,6 +3,12 @@ package fvtc.edu.galleryapp;
 import java.util.ArrayList;
 
 public class IntialData {
+    public static void SetInitailData(){
+
+        CreateCharacters();
+        CreateImgs();
+        CreateTextFiles();
+    }
     public static Character[] CreateCharacters(){
         Character[] characters = {
                 new Character("Amber", "flame archer"),
@@ -118,4 +124,5 @@ public class IntialData {
         };
         return textFiles;
     }
+
 }

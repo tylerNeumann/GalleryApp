@@ -27,6 +27,7 @@
                 android:contentDescription="@string/display_a_character"
                 android:src="@drawable/_amber" />
             <TextView
+                android:id="@+id/tvCharacter1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/character_1"
@@ -46,6 +47,7 @@
                 android:contentDescription="@string/display_a_character"
                 android:src="@drawable/_amber"/>
             <TextView
+                android:id="@+id/tvCharacter2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/character_2"
@@ -65,6 +67,7 @@
                 android:contentDescription="@string/display_a_character"
                 android:src="@drawable/_amber"/>
             <TextView
+                android:id="@+id/tvCharacter3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/character_3"

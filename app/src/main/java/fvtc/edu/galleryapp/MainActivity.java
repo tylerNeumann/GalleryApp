@@ -39,14 +39,14 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-
+        IntialData.SetInitailData();
+        new Navbar().setNavbar(this);
         imgCard = findViewById(R.id.imageView);
         tvCard = findViewById(R.id.tvInfo);
         tvCard.setMovementMethod(new ScrollingMovementMethod());
         tvCard.setText(characters[cardNum].getName());
         updateToNextCard();
         gestureDetector = new GestureDetector(this,this);
-        new Navbar();
         Log.d(TAG, "onCreate: complete");
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
